@@ -1,16 +1,210 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Мой первый HTML</title>
+    <title>179 Network</title>
+    <style>
+        :root {
+            /* Заголовок */
+            --title-size: 36px;
+            --title-color: #2c3e50;
+            
+            /* Описание */
+            --description-size: 18px;
+            --description-color: #7f8c8d;
+            
+            /* Основная кнопка */
+            --main-button-size: 20px;
+            --main-button-color: rgb(52, 152, 219);
+            --main-button-text-color: white;
+            --main-button-width: 200px;
+            --main-button-height: 50px;
+            
+            /* Вторая кнопка */
+            --button1-size: 16px;
+            --button1-color: #ffffff;
+            --button1-text-color: rgb(52, 152, 219);
+            --button1-width: 150px;
+            --button1-height: 40px;
+            
+            /* Третья кнопка */
+            --button2-size: 16px;
+            --button2-color: rgb(255, 255, 255);
+            --button2-text-color: rgb(52, 152, 219);
+            --button2-width: 150px;
+            --button2-height: 40px;
+
+            /* Четвертая кнопка */
+            --button3-size: 16px;
+            --button3-color: #e74c3c;
+            --button3-text-color: white;
+            --button3-width: 180px;
+            --button3-height: 45px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Стили для заголовка */
+        .title {
+            font-size: var(--title-size);
+            color: var(--title-color);
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Стили для описания */
+        .description {
+            font-size: var(--description-size);
+            color: var(--description-color);
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Общие стили для кнопок */
+        .button {
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Основная кнопка */
+        .main-button {
+            font-size: var(--main-button-size);
+            background-color: var(--main-button-color);
+            color: var(--main-button-text-color);
+            width: var(--main-button-width);
+            height: var(--main-button-height);
+        }
+
+        /* Контейнер для нижних кнопок */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Вторая кнопка */
+        .button1 {
+            font-size: var(--button1-size);
+            background-color: var(--button1-color);
+            color: var(--button1-text-color);
+            width: var(--button1-width);
+            height: var(--button1-height);
+            border: 2px solid rgb(52, 152, 219);
+        }
+
+        /* Третья кнопка */
+        .button2 {
+            font-size: var(--button2-size);
+            background-color: var(--button2-color);
+            color: var(--button2-text-color);
+            width: var(--button2-width);
+            height: var(--button2-height);
+            border: 2px solid rgb(52, 152, 219);
+        }
+
+        /* Четвертая кнопка */
+        .button3 {
+            font-size: var(--button3-size);
+            background-color: var(--button3-color);
+            color: var(--button3-text-color);
+            width: var(--button3-width);
+            height: var(--button3-height);
+        }
+
+        /* Комментарий под кнопкой предложений */
+        .suggestion-comment {
+            font-size: 14px;
+            color: #7f8c8d;
+            text-align: center;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Инструкция по изменению */
+        .instructions {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .instructions code {
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="color: black; font-size: 40px;">Бессолицын Кирилл 10В</h1>
-    <figure>
-        <img src="http://ffssr.ru/upload/sportsmen/820.jpg" alt="Кирилл" width="400" height="300">
-        <figcaption style="color: black; font-size: 20px;">всем салам, я кирюша и у меня дцп</figcaption>
-    </figure>
+    <div class="container">
+        <!-- Заголовок -->
+        <h1 class="title">179 Network</h1>
+        
+        <!-- Описание -->
+        <p class="description">Made by Lion, Kebab, Imp and Field</p>
+        
+        <!-- Основная кнопка -->
+        <button class="button main-button">Расписание</button>
+        
+        <!-- Контейнер для нижних кнопок -->
+        <div class="buttons-container">
+            <button class="button button1">Найти ученика</button>
+            <button class="button button2">Найти учителя</button>
+            <button class="button button3">Предложения</button>
+            <div>
+                <div class="suggestion-comment">предложения, жалобы, угрозы, что угодно <3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3>Где я?</h3>
+        <p>Это сайт 179 школы, созданный её учениками, для удобной комуникации между жителями нашей школы</p>
+        <h3>Что здесь есть?</h3>
+        <ul>
+            <li><strong>Раcписание</strong> всех классов и учителей</li>
+            <li><strong>Информация</strong> о каждом человеке та, которую он захочет</li>
+            <li><strong>TG bot</strong>, который поможет вам не опаздывать на уроки и всегда быть в курсе</li>
+            <li><strong>Что-то ещё</strong> ну наверняка будет</li>
+        </ul>
+    </div>
 </body>
 </html>
