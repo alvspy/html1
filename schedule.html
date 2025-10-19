@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Расписание - 179 Network</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            /* Фоновая картинка */
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0_179_%D0%9C%D0%98%D0%9E%D0%9E%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg/1200px-%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0_179_%D0%9C%D0%98%D0%9E%D0%9E%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg); /* Замените на путь к вашей картинке */
+            background-size: cover; /* Растягивает на весь экран */
+            background-position: center; /* Центрирует */
+            background-repeat: no-repeat; /* Не повторяет */
+            background-attachment: fixed; /* Фиксирует при скролле */
+            position: relative; /* Нужно для псевдоэлемента */
+        }
+
+        /* Затемняющий слой поверх фона */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(248, 249, 250, 0.7); /* Цвет и прозрачность */
+            z-index: -1; /* Под всем контентом */
+        }
         :root {
             /* Заголовок */
             --title-size: 36px;
@@ -122,3 +148,4 @@
 </body>
 
 </html>
+
